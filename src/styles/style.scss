@@ -1,0 +1,16 @@
+@import './sass/sass_components/header';
+@import './sass/sass_components/footer';
+@import './sass/config';
+@import './sass/variables';
+
+/* =========================
+      |UTILITY|
+========================= */
+.clr-gray-text{
+      color: $Light-gray;
+      font-size: 1.6rem;
+
+      // Font weight of 450? Yes!!
+      font-weight: 450;
+}
+

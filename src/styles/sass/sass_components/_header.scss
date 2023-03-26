@@ -1,0 +1,227 @@
+@import '../variables';
+// --------HEADER------- //
+
+.header {
+    margin-block: 2rem 3rem;
+    @include flexComp(0, center, unset);
+    justify-content: space-between;
+}
+
+.menu {
+    position: fixed;
+    right: 1.5rem;
+    z-index: 10;
+    transition: all .35s ease;
+}
+
+.menu.opened {
+    top: 5rem;
+    right: 5rem;
+}
+
+// NAV SECTION
+.nav {
+
+     &-mobile{
+        position: fixed;
+        z-index: 10;
+        inset: 2rem 1.5rem auto;
+        padding: 3rem 3.5rem;
+        background-color: $White;
+        transition: .35s ease-in-out all;
+        border-radius: 1rem;
+    }  
+
+    &-mobile__title {
+        @include flexComp(0, center, space-between);
+
+        p {
+            color: $Very-light-gray-blue;
+        }
+    }
+
+    &.openedmenu {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    &-mobile__content{
+        margin-top: 2.5rem;
+        @include flexComp(2rem, unset, unset);
+        flex-direction: column;
+    }
+
+    &-desktop{
+        display: none
+    }
+}
+
+
+.nmc {
+    &__header {
+        @include flexComp(1rem, center, unset);
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: $Dark-gray-blue;
+            margin-bottom: .5rem;
+        }
+    }
+
+    p {
+        margin-left: calc(24px + 1rem);
+        line-height: 1.5;
+        color: $Light-gray-blue;
+    }
+}
+
+
+// --------HEADER CONTENT------- //
+
+.headerContent{
+    display: grid;
+    gap: 5rem;
+    align-items: center;
+}
+
+
+// LEFT SECTION
+
+.hc__head {
+    h1 {
+        font-size: clamp(3.2rem, 6vw, 5rem);
+        font-weight: 800;
+
+        span {
+            color: $Yellow;
+        }
+    }
+
+    p {
+        margin-block: 1.5rem;
+        line-height: 1.5;
+    }
+
+}
+.try-btn {
+    padding: 1.5rem 3rem;
+    color: $Cream;
+    background-color: $Dark-green;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: .5rem;
+
+    a{
+        color: $Cream;
+    }
+}
+
+.hc__rating {
+    margin-top: 3rem;
+
+    p {
+        @include flexComp(1.5rem, center, unset);
+
+        img {
+            display: inline;
+        }
+    }
+}
+
+// RIGHT SECTION
+.headerContent__right {
+    justify-self: center;
+    width: 100%;
+    height: 40rem;
+    background-color: $Dark-purple;
+    border: $Light-cyan solid .4rem;
+    border-radius: 2rem;
+}
+
+// MORE OPTIONS BUTTON
+.user__option__button{
+    @include flexComp(0, center, center);
+    position: absolute;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    gap: .3rem;
+    border-radius: 50%;
+}
+
+.dot{
+    background-color: $Cream;
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+}
+
+// USER DESIGN
+.user {
+    position: relative;
+    z-index: 0;
+    padding: 2rem;
+
+    &__image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        @include flexComp(0, center, center);
+    }
+    
+    &__image.animation{
+        animation: onSpeakAnimation .5s infinite linear both;
+        
+    }
+
+    @keyframes onSpeakAnimation {
+        0%{
+            scale: .9;
+        }
+        50%{
+            scale: 1;
+        }
+        100%{
+            scale: 1.2;
+        }
+    }
+
+    &__profile {
+        width: 100px;
+        aspect-ratio: 1 / 1;
+        @include flexComp(0, center, center);
+    }
+
+}
+
+// UTILITY CLASSES
+.dark-bg{
+    background-color: $Very-Dark-purple;
+    padding: .5rem;
+}
+.user__border{
+    border-radius: 2rem;
+    padding: 1rem;
+}
+// -------------------- //
+
+.user__bottom{
+    @include flexComp(0, center, center);
+    gap: 1rem;
+    position: absolute;
+    bottom: 2rem;
+
+    .user__name{
+        color: $Cream;
+        font-size: 1.4rem;
+    }
+    .user__audio{
+        width: 3.8rem;
+        cursor: pointer;
+    }
+}
+
+// MEDIA QUERY
+@import 'media';

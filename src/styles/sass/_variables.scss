@@ -1,0 +1,20 @@
+$White: rgb(255, 255, 255);
+$Cream: #f3ede5;
+$Yellow: #f7b300;
+$Dark-green: #133416;
+$Light-gray: #6c6c6c;
+$Dark-purple: #251c3b; //For Sara Johnson background
+$Very-Dark-purple: #171023; // Background component for sara johnson, mic and more options button 
+$Light-cyan: #54ac7e; // Layer for Sara Johnson background
+// Text color for Menu
+$Very-light-gray-blue: #8898aa;
+$Light-gray-blue: #758594;
+$Dark-gray-blue: #0a263f;
+
+
+@mixin flexComp($gap, $alignContent, $justifyContent){
+    display: flex;
+    align-items: $alignContent;
+    justify-content: $justifyContent;
+    gap: $gap;
+}
