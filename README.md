@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Ondesk](https://code-stan.github.io/ondesk)
+- Live Site URL: [Ondesk](https://ondeskcodestan.netlify.app/)
 
 ## My process
 
